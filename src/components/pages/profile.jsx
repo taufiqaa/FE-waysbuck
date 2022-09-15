@@ -75,7 +75,7 @@ function Profile() {
               <div className="picture-menu">
                 <img
                   className="picture-menuPurchased"
-                  src={"http://localhost:2500/uploads/"+item?.product?.image}
+                  src={item?.product?.image}
                   alt=""
                 />
               </div>
