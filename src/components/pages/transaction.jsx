@@ -69,7 +69,7 @@ export default function Income() {
                     {data.product.title}, </h6>
                     ))}</td>
                 <td>Rp {data.amount}</td>
-                <td onClick={()=>setTransactionPopUp(true)}>{data.status}</td>
+                <td>{data.status}</td>
                 <td>
                 <h6 className="productIncome" key={index}>
                     {dateFormat(data.updated_at, 'd mmmm yyyy')}</h6>
@@ -80,83 +80,6 @@ export default function Income() {
           </table>
       </section>
     </main>
-    { transactionPopUp && 
-    <section className="modal fixed z-index-3 w100 h100 flex jc-center ai-center"
-    onClick={ () => setTransactionPopUp(false) }
-    >
-      <div className="detail-transaction">
-        <div className="left-container">
-
-          <div className="main-order">
-            <div className="picture-menu">
-              <img
-              className="picture-menuPurchased"
-              src="https://www.pngitem.com/pimgs/m/129-1296068_caramel-macchiato-vanilla-bean-macchiato-starbucks-hd-png.png"
-              alt=""
-              />
-            </div>
-            <div className="data-order">
-              <div className="data-flavour">
-                <h6>Ice Coffee Palm Sugar</h6>
-              </div>
-              <div className="orderTime">
-                <h6>Saturday, 3-Juli-2022</h6>
-              </div>
-              <div className="data-topping">
-                <h6>Topping: Berry Boba, Bubble Tea Gelatin</h6>
-              </div>
-              <div className="data-price">
-                <h6>Price : Rp 33.000</h6>
-              </div>
-            </div>
-          </div>
-
-          <div className="main-order">
-            <div className="picture-menu">
-              <img
-              className="picture-menuPurchased"
-              src="https://www.pngitem.com/pimgs/m/129-1296068_caramel-macchiato-vanilla-bean-macchiato-starbucks-hd-png.png"
-              alt=""
-              />
-            </div>
-            <div className="data-order">
-              <div className="data-flavour">
-                <h6>Ice Coffee Palm Sugar</h6>
-              </div>
-              <div className="orderTime">
-                <h6>Saturday, 3-Juli-2022</h6>
-              </div>
-              <div className="data-topping">
-                <h6>Topping: Berry Boba, Bubble Tea Gelatin</h6>
-              </div>
-              <div className="data-price">
-                <h6>Price : Rp 33.000</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="right-container">
-          <div className="logo-transaction">
-            <img className="logo-detail" src={logo} alt="logo" />
-          </div>
-          <div className="qr-transaction">
-            <img
-            className="qr-code"
-            src="https://i.stack.imgur.com/XHWnX.png"
-            alt=""
-            />
-          </div>
-          <div className="status-order">
-            <h6>On the way</h6>
-          </div>
-          <div className="subTotal">
-            <h6>Sub Total : Rp 69.000</h6>
-          </div>
-        </div>
-      </div>
-    </section>
-    }
     </>
   )
 }
